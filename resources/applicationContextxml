@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+    <context:component-scan base-package="com"/>
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+    <!-- _______________________lesson2___________________________ -->
+<!--    <bean id="testBean" class="com.lesson2.TestBean">-->
+<!--        <constructor-arg value="Nell"/>-->
+<!--    </bean>-->
+
+    <!-- _______________________lesson 4___________________________ -->
+    <!--    вариант_1-->
+    <!--        <bean id="musicBean" class="com.lesson4567.ClassicalMusic"></bean>-->
+    <!--    вариант_2-->
+    <!--        <bean id="musicBean" class="com.lesson4567.RockMusic"></bean>-->
+
+    <!-- _______________________lesson5___________________________ -->
+    <!--    <bean id="musicBean" class="com.lesson4567.RockMusic"></bean>-->
+    <!--    <bean id="musicPlayer" class="com.lesson4567.MusicPlayer">-->
+    <!--    <constructor-arg ref= "musicBean" />-->
+    <!--    </bean>-->
+
+    <!-- _______________________lesson67___________________________ -->
+<!--        <bean id="musicBean" class="com.lesson4567.ClassicalMusic"-->
+<!--              init-method="doMyInt"-->
+<!--              destroy-method="doMyDestroy"-->
+<!--              factory-method="getCLassicalMusic">-->
+<!--        </bean>-->
+<!--        <bean id="musicPlayer"-->
+<!--              class="com.lesson4567.MusicPlayer"-->
+<!--              scope="prototype">            &lt;!&ndash;scope="singleton"&ndash;&gt;-->
+<!--            <property name = "music" ref="musicBean"/>                  &lt;!&ndash; name без set и с маленькой буквы &ndash;&gt;-->
+<!--&lt;!&ndash;            <property name="name" value="Some name"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <property name="volume" value="90"/>&ndash;&gt;-->
+<!--            <property name="name"       value="${musicPlayer.name}"/>-->
+<!--            <property name="volume"     value="${musicPlayer.volume}"/>-->
+<!--        </bean>-->
+
+</beans>
